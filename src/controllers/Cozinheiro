@@ -24,7 +24,7 @@ public class Cozinheiro extends HttpServlet {
         String pedido = request.getParameter("pedido");
 
         Pedido p = new Pedido(nomeCozinheiro, pedido, 0);
-        p.setstatus(status);
+        p.setStatus(status);
 
         request.setAttribute("pedido", p);
         request.getRequestDispatcher("/views/cozinheiro.jsp").forward(request, response);
